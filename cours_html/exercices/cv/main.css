@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'cac_champagneregular';
+    src: url('fonts/cac_champagne-webfont.eot');
+    src: url('fonts/cac_champagne-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/cac_champagne-webfont.woff2') format('woff2'),
+         url('fonts/cac_champagne-webfont.woff') format('woff'),
+         url('fonts/cac_champagne-webfont.ttf') format('truetype'),
+         url('fonts/cac_champagne-webfont.svg#cac_champagneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* Titre en gros et au centre */
+.title_center
+{
+    font-size: 4em;
+    font-family: cac_champagneregular;
+    text-align: center;
+}
+
+.info_importante
+{
+    color: blue;
+    font-family: Georgia , Verdana;
+    font-style: italic;
+    font-size: 0.8em;
+}
+
+h2
+{ 
+    border-left: 3px black solid;
+    border-bottom: 1px black dashed;
+    text-shadow: 2px 2px 4px coral;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.titre_principal
+{
+    flex: 1;
+}
+
+#bloc_page
+{
+     display: flex;
+    flex-direction: row;  
+}
+
+#lisere
+{
+    background-color: dimgray;
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    align-items: stretch;
+    border-radius: 5px 5px 5px 5px;
+    margin: 0 10px 0 10px;
+}
+
+.liste_section_cv
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.section_cv
+{
+    margin: 0 10px 0 10px;
+}
+ 
+
+@media screen and (max-width: 1280px)
+{
+    /* Masque le liseré */
+    #lisere
+    {
+        display: none;
+    }
+
+    .liste_section_cv
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #bloc_page
+    {
+        display: flex;
+        flex-direction: column;  
+    }
+}
+
