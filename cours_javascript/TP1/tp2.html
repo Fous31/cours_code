@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Le titre de la page</title>
+</head>
+
+<body>
+    
+    <script>
+        var divElement = document.createElement("div");
+        divElement.setAttribute("id","divTP2");
+        document.body.appendChild(divElement);
+
+        var ulElement = document.createElement("ul");
+        divElement.appendChild(ulElement);
+     
+        var literals = ['JavaScript', "JScript", "ActionsScript", 'EX4']
+
+        for (var i = 0; i < 4; i++) {
+            var liElement = document.createElement("li");
+            liElement.textContent = literals[i];
+            ulElement.appendChild(liElement);
+        }
+
+    </script>
+</body>
+</html>
