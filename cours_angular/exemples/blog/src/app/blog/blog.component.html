@@ -1,0 +1,15 @@
+<div class="list-group">   <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+      <div class="d-flex w-100 justify-content-between">
+       <h5> {{ title }} </h5>
+       <small>crée le : {{ created_at }}</small>
+       <p class="mb-1"> {{ content }} </p>
+ 
+  <small>  
+    Love : {{ loveIts }} 
+    <div class="btn-group" role="group" aria-label="Basic example">    
+      <button class="btn btn-success btn-sm" (click)="onAddLove()" > +1 </button>
+      <button class="btn btn-danger btn-sm" (click)="onRemoveLove()" > -1 </button>
+    </div>
+  </small>
+</div>
+
