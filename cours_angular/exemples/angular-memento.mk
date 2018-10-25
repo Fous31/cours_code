@@ -27,6 +27,7 @@ laison vers un élément
 
 ## 2 sens -> two-way bindind
 	[(ngModel)]="appareilName"		
+Besoin du module Forms import { FormsModule } from '@angular/forms';
 
 ## Propriété personnalisé
 @Input() sur un attribut de la classe trueScript
@@ -55,5 +56,12 @@ ngClass applique une class css
 
 date 
 uppercase 
-async : utilisation avec Promise ou 
+async : utilisation avec Promise ou observable
 
+#Service
+3 niveaux d'injection:
+- Global (composants+service) : dans AppModule (dans providers)
+- Components (composants) : dans AppComponent
+- Component (composant + enfants) : dans le composant
+
+ 
