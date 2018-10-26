@@ -4,6 +4,7 @@ ng new mon-projet-angular --style=scss --skip-tests=true
 --skip-tests=true : pas de test
 
 ng generate component mon-premier : création d’un nouveau component
+bg g c : raccourci création composant
 
 ng serve : lancement du serveur
 
