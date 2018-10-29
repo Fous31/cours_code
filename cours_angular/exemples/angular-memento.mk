@@ -4,7 +4,7 @@ ng new mon-projet-angular --style=scss --skip-tests=true
 --skip-tests=true : pas de test
 
 ng generate component mon-premier : création d’un nouveau component
-bg g c : raccourci création composant
+ng g c : raccourci création composant
 
 ng serve : lancement du serveur
 
@@ -65,4 +65,43 @@ async : utilisation avec Promise ou observable
 - Components (composants) : dans AppComponent
 - Component (composant + enfants) : dans le composant
 
+# Routes
+
+## Declatarion
+declaration dans app.module.ts (possible de metre dans un fichier séparé)
+
+const appRoutes: Routes = [
+  { path: 'appareils', canActivate: [AuthGuard], component: AppareilViewComponent },
+  { path: 'appareils/:id', canActivate: [AuthGuard], component: SingleAppareilComponent },
+  { path: 'auth', component: AuthComponent },
+  { path: '', component: AppareilViewComponent },
+  { path: 'not-found', component: FourOhFourComponent },
+  { path: '**', redirectTo: 'not-found' }
+];
+
+imports: [
+    RouterModule.forRoot(appRoutes)
+  ],
+
+## HTML
+Pour utiliser les routes
+<router-outlet></router-outlet>
+
+Pour naviger
+<li routerLinkActive="active"><a routerLink="auth">Authentification</a></li>
  
+##js
+Service Route : Change de page : this.router.navigate(['appareils']);
+Service ActivatedRoute : Recuperer l'id de l'url: this.route.snapshot.params['id']
+
+##Guard
+Classe de service qui implémente CanActivate
+
+#RxJS : observable (voir http://reactivex.io/)
+
+Observable emet : données, erreur, ou message complexe
+
+
+
+
+
