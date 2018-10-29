@@ -9,4 +9,6 @@
   <button class="btn btn-sm btn-success" *ngIf="appareilStatus === 0" (click)="onSwitch()">Allumer</button>
   <button class="btn btn-sm btn-danger" *ngIf="appareilStatus === 1" (click)="onSwitch()">Eteindre</button>
 
+  <a [routerLink]="[id]">Détail</a>
+
 </li>
