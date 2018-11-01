@@ -1,0 +1,21 @@
+<div class="col-sm-8 col-sm-offset-2">
+  <form [formGroup]="appareilForm" (ngSubmit)="onSubmitForm()">
+    <div class="form-group">
+      <label for="id">Id</label>
+      <input type="text" id="id" class="form-control" formControlName="id">
+    </div>
+    <div class="form-group">
+      <label for="name">Nom</label>
+      <input type="text" id="name" class="form-control" formControlName="name">
+    </div>
+    <div class="form-group">
+      <label for="status"> État de l'appareil  </label>
+      <select id="status" class="form-control" name="status" formControlName="status">
+        <option value="0">Allumé</option>
+        <option value="1">Éteint</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Soumettre</button>
+  </form>
+</div>

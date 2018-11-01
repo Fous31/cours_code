@@ -65,9 +65,9 @@ async : utilisation avec Promise ou observable
 - Components (composants) : dans AppComponent
 - Component (composant + enfants) : dans le composant
 
-# Routes
+#Routes
 
-## Declatarion
+##Declatarion
 declaration dans app.module.ts (possible de metre dans un fichier séparé)
 
 const appRoutes: Routes = [
@@ -83,7 +83,7 @@ imports: [
     RouterModule.forRoot(appRoutes)
   ],
 
-## HTML
+##HTML
 Pour utiliser les routes
 <router-outlet></router-outlet>
 
@@ -101,7 +101,22 @@ Classe de service qui implémente CanActivate
 
 Observable emet : données, erreur, ou message complexe
 
+#Reactive Form
+import ReactiveFormsModule
 
+Service FormBuilder : création objet FormGroup.group
 
+this.appareilForm = this.formBuilder.group({
+      id: '',
+      name: ['', Validators.required],
+      status: ''
+    });
+
+Recuperation des valeurs saisi : this.appareilForm.value[...]
+
+Form utilisation 'formControlName'
+<form [formGroup]="appareilForm" (ngSubmit)="onSubmitForm()">
+
+<input type="text" id="name" class="form-control" formControlName="name">
 
 
